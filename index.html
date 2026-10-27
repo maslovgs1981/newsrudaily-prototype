@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>NewsruDaily — прототип главной</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,800&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к новостям</a>
+<header class="header">
+  <div class="header-top wrap">
+    <a class="logo" href="index.html" aria-label="NewsruDaily, главная">NEWSru<span>Daily</span></a>
+    <p class="tagline">Новости на русском. Для всего мира.</p>
+    <div class="search-area"><time datetime="2024-05-15T14:32:00-04:00">Среда, 15 мая 2024, 14:32 (ET)</time><div class="search"><input type="search" aria-label="Поиск новостей" placeholder="Поиск новостей…"><span aria-hidden="true">⌕</span></div></div>
+    <button class="support" type="button" aria-disabled="true" title="Демонстрация кнопки поддержки">Поддержать $0.99/мес</button>
+    <div class="language"><button id="language-button" type="button" aria-expanded="false" aria-controls="language-list" aria-label="Выбор языка"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="4" ry="10"/><path d="M2 12h20M4 6h16M4 18h16"/></svg><span id="language-value">RU</span><span aria-hidden="true">⌄</span></button><div class="language-list" id="language-list" hidden><button type="button" data-language="RU" aria-pressed="true"><img class="language-flag" src="img/flag-ru.svg" width="18" height="12" alt="" aria-hidden="true"><span lang="ru">Русский</span><span class="check">✓</span></button><button type="button" data-language="EN" aria-pressed="false"><img class="language-flag" src="img/flag-us.svg" width="18" height="12" alt="" aria-hidden="true"><span lang="en">English</span><span class="check">✓</span></button></div></div>
+    <button class="login" type="button" aria-disabled="true" title="Демонстрация кнопки входа"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 22v-3a9 9 0 0 1 18 0v3z"/></svg>Войти</button>
+    <button class="burger" id="burger" type="button" aria-controls="categories" aria-expanded="false" aria-label="Открыть меню рубрик"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="navigation wrap" id="categories" aria-label="Рубрики">
+    <a href="index.html" aria-current="page">Главная</a><a href="#main">Мир</a><a href="#main">Россия</a><a href="#main">США</a><a href="#cards">Европа</a><a href="#cards">Бизнес</a><a href="#main">Технологии</a><a href="#cards">Общество</a><a href="#latest">Здоровье</a><a href="#latest">Культура</a><a href="#latest">Спорт</a><a href="#opinions">Мнения</a><a href="#latest">Еще <span aria-hidden="true">⌄</span></a>
+    <div class="mobile-tools">
+      <p class="tagline">Новости на русском. Для всего мира.</p>
+      <div class="search-area"><time datetime="2024-05-15T14:32:00-04:00">Среда, 15 мая 2024, 14:32 (ET)</time><div class="search"><input type="search" aria-label="Поиск новостей" placeholder="Поиск новостей…"><span aria-hidden="true">⌕</span></div></div>
+      <button class="support" type="button" aria-disabled="true" title="Демонстрация кнопки поддержки">Поддержать $0.99/мес</button>
+      <button class="login" type="button" aria-disabled="true" title="Демонстрация кнопки входа"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M3 22v-3a9 9 0 0 1 18 0v3z"/></svg>Войти</button>
+    </div>
+  </nav>
+</header>
+<main class="layout wrap" id="main">
+ <div class="primary">
+  <section class="lead-grid" aria-label="Главные события">
+   <article class="hero" id="lead-story">
+    <img src="img/world.svg" width="960" height="540" alt="Мир — нейтральная иллюстрация в цветах бренда">
+    <div class="hero-copy"><h1>В Европе обсудили новые меры поддержки Украины</h1><p>Лидеры стран ЕС провели встречу в Брюсселе, где обсудили дальнейшую военную и экономическую поддержку Украины, а также новые санкции против России.</p><div class="meta"><time datetime="2024-05-15T12:41">15 мая 2024, 12:41</time><span>Мир</span></div></div>
+   </article>
+   <div class="headlines">
+    <article class="headline"><img src="img/usa.svg" width="320" height="180" alt="США — нейтральная иллюстрация"><div><h2>США объявили о новом пакете санкций против России</h2><div class="meta"><time datetime="2024-05-15T11:20">15 мая 2024, 11:20</time><span>США</span></div></div></article>
+    <article class="headline"><img src="img/russia.svg" width="320" height="180" alt="Россия — нейтральная иллюстрация"><div><h2>В России ужесточают контроль за интернетом</h2><div class="meta"><time datetime="2024-05-15T10:58">15 мая 2024, 10:58</time><span>Россия</span></div></div></article>
+    <article class="headline"><img src="img/business.svg" width="320" height="180" alt="Бизнес — нейтральная иллюстрация"><div><h2>Мировые рынки отреагировали на данные по инфляции</h2><div class="meta"><time datetime="2024-05-15T10:15">15 мая 2024, 10:15</time><span>Бизнес</span></div></div></article>
+    <article class="headline"><img src="img/technology.svg" width="320" height="180" alt="Технологии — нейтральная иллюстрация"><div><h2>Новые открытия в области искусственного интеллекта</h2><div class="meta"><time datetime="2024-05-15T09:42">15 мая 2024, 09:42</time><span>Технологии</span></div></div></article>
+   </div>
+  </section>
+  <section class="cards" id="cards" aria-label="Новости по рубрикам">
+   <article><img src="img/europe.svg" width="640" height="360" alt="Европа — нейтральная иллюстрация"><h2>НАТО усиливает присутствие на восточном фланге</h2><div class="meta"><time datetime="2024-05-15T09:21">15 мая 2024, 09:21</time><span>Европа</span></div></article>
+   <article><img src="img/usa.svg" width="640" height="360" alt="США — нейтральная иллюстрация"><h2>В Конгрессе США обсуждают новый пакет помощи Украине</h2><div class="meta"><time datetime="2024-05-15T08:37">15 мая 2024, 08:37</time><span>США</span></div></article>
+   <article><img src="img/business.svg" width="640" height="360" alt="Бизнес — нейтральная иллюстрация"><h2>Курс рубля снижается на фоне новых санкций</h2><div class="meta"><time datetime="2024-05-15T08:12">15 мая 2024, 08:12</time><span>Бизнес</span></div></article>
+   <article><img src="img/society.svg" width="640" height="360" alt="Общество — нейтральная иллюстрация"><h2>В крупных городах России растет спрос на жилье</h2><div class="meta"><time datetime="2024-05-15T07:55">15 мая 2024, 07:55</time><span>Общество</span></div></article>
+  </section>
+  <div class="news-columns">
+   <section id="latest"><h2 class="section-title">Главные новости</h2><ul class="timeline">
+    <li><time datetime="2024-05-15T14:18">14:18</time><span>ВОЗ предупреждает о росте заболеваемости</span></li>
+    <li><time datetime="2024-05-15T13:52">13:52</time><span>В ЕС согласовали новый пакет санкций</span></li>
+    <li><time datetime="2024-05-15T13:27">13:27</time><span>Apple представила обновления iOS</span></li>
+    <li><time datetime="2024-05-15T12:58">12:58</time><span>В России обсуждают изменения в налоговой системе</span></li>
+    <li><time datetime="2024-05-15T12:34">12:34</time><span>В Китае заявили о готовности к диалогу</span></li>
+    <li><time datetime="2024-05-15T12:11">12:11</time><span>Цены на нефть выросли на 2,3%</span></li>
+    <li><time datetime="2024-05-15T11:46">11:46</time><span>В США зафиксирован рост инфляции</span></li>
+    <li><time datetime="2024-05-15T11:20">11:20</time><span>В Европе ожидают аномальную жару</span></li>
+   </ul><a class="more" href="#latest">Все новости →</a></section>
+   <section><h2 class="section-title">Популярное</h2><ol class="ranked compact">
+    <li>Что известно о новых санкциях США против России</li><li>Как изменится интернет в России</li><li>Прогнозы по курсу рубля на лето</li><li>Новая модель искусственного интеллекта от OpenAI</li><li>Ситуация на фронте: последние обновления</li><li>Мировые цены на нефть: что будет дальше</li><li>В ЕС обсуждают замороженные активы России</li><li>Как защитить свои данные в интернете</li>
+   </ol></section>
+   <section id="opinions"><h2 class="section-title">Мнения</h2><ul class="opinions">
+    <li><span class="avatar" aria-hidden="true">АК</span><div><h3>Мир на переломном этапе</h3><p>Андрей Козырев</p></div></li>
+    <li><span class="avatar" aria-hidden="true">ИП</span><div><h3>Будущее Европы без России</h3><p>Ирина Петрова</p></div></li>
+    <li><span class="avatar" aria-hidden="true">СА</span><div><h3>Экономика в новой реальности</h3><p>Сергей Алексашенко</p></div></li>
+    <li><span class="avatar" aria-hidden="true">НЗ</span><div><h3>Технологии меняют мир</h3><p>Наталья Зубаревич</p></div></li>
+   </ul><a class="more" href="#opinions">Все мнения →</a></section>
+  </div>
+ </div>
+ <aside class="sidebar" aria-label="Дополнительные материалы">
+  <section><h2 class="section-title">Популярное в разделе</h2><ol class="ranked boxed"><li>Новые санкции ЕС: что известно</li><li>Ситуация в Украине: последние новости</li><li>Конфликт на Ближнем Востоке</li><li>Отношения США и Китай</li><li>Безопасность в Европе</li></ol></section>
+  <section class="related"><h2 class="section-title">Читайте также</h2><ul>
+   <li><img src="img/usa.svg" width="160" height="90" alt="США — нейтральная иллюстрация"><span>США объявили о новом пакете санкций против России</span></li>
+   <li><img src="img/europe.svg" width="160" height="90" alt="Европа — нейтральная иллюстрация"><span>Великобритания расширяет ограничения</span></li>
+   <li><img src="img/europe.svg" width="160" height="90" alt="Европа — нейтральная иллюстрация"><span>В Польше усиливают безопасность на границе</span></li>
+   <li><img src="img/world.svg" width="160" height="90" alt="Мир — нейтральная иллюстрация"><span>В ООН призвали к деэскалации</span></li>
+   <li><img src="img/world.svg" width="160" height="90" alt="Мир — нейтральная иллюстрация"><span>Китай выступил за мирные переговоры</span></li>
+  </ul></section>
+  <figure class="quote"><span aria-hidden="true">“</span><blockquote>Мы продолжим поддерживать Украину столь долго, сколько потребуется. Это вопрос безопасности всей Европы.</blockquote><figcaption>Председатель Еврокомиссии<br>Урсула фон дер Ляйен</figcaption></figure>
+  <section class="share"><h2>Поделиться</h2><div class="socials">
+   <button type="button" aria-label="Facebook" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 22v-9h3l.5-4H14V7c0-1 .3-2 2-2h2V1h-3c-4 0-5 2-5 6v2H7v4h3v9z"/></svg></button>
+   <button type="button" aria-label="X" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 16 18h-4L1 3zm16 0L4 21h3L23 3z"/></svg></button>
+   <button type="button" aria-label="Telegram" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 10 20-8-4 20-6-6-4 4 1-7 9-8-11 6z"/></svg></button>
+   <button type="button" aria-label="WhatsApp" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 2 22l1-6a10 10 0 1 1 2 3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m8 6 3 4-2 2 3 3 2-2 4 3c-3 6-14-4-10-10z"/></svg></button>
+   <button type="button" aria-label="ВКонтакте" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h4c1 6 3 9 4 9V5h4v7l4-7h4l-5 8 5 6h-5l-3-4v4C6 20 3 13 2 5z"/></svg></button>
+   <button type="button" aria-label="Электронная почта" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 5 9 8 9-8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  </div></section>
+ </aside>
+</main>
+<footer class="wrap">Прототип главной страницы по макету, тексты из макета, фото заменены заглушками</footer>
+<script>
+const languageButton = document.getElementById('language-button');
+const languageList = document.getElementById('language-list');
+function closeLanguage() { languageList.hidden = true; languageButton.setAttribute('aria-expanded', 'false'); }
+languageButton.addEventListener('click', () => { const open = languageList.hidden; languageList.hidden = !open; languageButton.setAttribute('aria-expanded', String(open)); });
+languageList.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+ document.getElementById('language-value').textContent = button.dataset.language;
+ languageList.querySelectorAll('button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+ closeLanguage(); languageButton.focus();
+}));
+document.addEventListener('click', event => { if (!event.target.closest('.language')) closeLanguage(); });
+const burger = document.getElementById('burger');
+const categories = document.getElementById('categories');
+function closeNavigation() { categories.classList.remove('is-open'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Открыть меню рубрик'); }
+burger.addEventListener('click', () => { const open = categories.classList.toggle('is-open'); burger.setAttribute('aria-expanded', String(open)); burger.setAttribute('aria-label', open ? 'Закрыть меню рубрик' : 'Открыть меню рубрик'); });
+categories.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNavigation));
+document.addEventListener('keydown', event => { if (event.key === 'Escape') { if (!languageList.hidden) { closeLanguage(); languageButton.focus(); } if (categories.classList.contains('is-open')) { closeNavigation(); burger.focus(); } } });
+</script>
+</body>
+</html>
